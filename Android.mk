@@ -23,3 +23,15 @@ else
 endif
 
 include $(BUILD_EXECUTABLE)
+
+# Copy prebuilt
+
+## Create dirs
+$(shell mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/sbin/etc/uwufetch/)
+$(shell mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/sbin/uwufetch/lib)
+
+## Copy files
+$(shell cp $(LOCAL_PATH)/default.config $(TARGET_RECOVERY_ROOT_OUT)/sbin/etc/uwufetch/config)
+$(shell cp -r $(LOCAL_PATH)/res/* $(TARGET_RECOVERY_ROOT_OUT)/sbin/uwufetch/lib)
+
+

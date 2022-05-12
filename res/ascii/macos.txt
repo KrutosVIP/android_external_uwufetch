@@ -1,8 +1,8 @@
-   {GREEN}    .:`
+       .:`
     .--``--.
-{YELLOW}  ww  OωO   w
-{RED} w         w
-{PINK} w          w
-{MAGENTA}  w         w
-{BLUE}   www_-_www
+  ww  OωO   w
+ w         w
+ w          w
+  w         w
+   www_-_www
 
