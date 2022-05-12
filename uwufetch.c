@@ -669,7 +669,7 @@ void print_ascii(struct info* user_info) {
 		else if (strcmp(user_info->os_name, "macos") == 0)
 			sprintf(ascii_file, "/usr/local/lib/uwufetch/ascii/%s.txt", user_info->os_name);
 		else
-			sprintf(ascii_file, "/sbin/uwufetch/lib/ascii/%s.txt", user_info->os_name);
+			sprintf(ascii_file, "/sbin/lib/uwufetch/ascii/%s.txt", user_info->os_name);
 
 		file = fopen(ascii_file, "r");
 		if (!file) {
