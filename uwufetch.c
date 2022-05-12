@@ -14,7 +14,7 @@
  */
 
 #ifndef UWUFETCH_VERSION
-	#define UWUFETCH_VERSION "unkown" // needs to be changed by the build script
+	#define UWUFETCH_VERSION "unknown" // needs to be changed by the build script
 #endif
 
 #define _GNU_SOURCE // for strcasestr
@@ -180,7 +180,7 @@ struct configuration parse_config(struct info* user_info) {
 					sprintf(prefixed_etc, "%s/etc/uwufetch/config", getenv("PREFIX"));
 					config = fopen(prefixed_etc, "r");
 				} else
-					config = fopen("/etc/uwufetch/config", "r");
+					config = fopen("/sbin/etc/uwufetch/config", "r");
 			}
 		}
 	} else
@@ -414,6 +414,7 @@ void uwu_name(struct configuration* config_flags, struct info* user_info) {
 	else STRING_TO_UWU("void", "OwOid");
 	else STRING_TO_UWU("xerolinux", "xuwulinux");
 	else STRING_TO_UWU("android", "Nyandroid"); // android at the end because it could be not considered as an actual distribution of gnu/linux
+	else STRING_TO_UWU("twrp", "NyanWin Recovery"); // TWRP is also not an actual distribution and based on Android components
 
 	// BSD
 	else STRING_TO_UWU("freebsd", "FweeBSD");
@@ -668,7 +669,7 @@ void print_ascii(struct info* user_info) {
 		else if (strcmp(user_info->os_name, "macos") == 0)
 			sprintf(ascii_file, "/usr/local/lib/uwufetch/ascii/%s.txt", user_info->os_name);
 		else
-			sprintf(ascii_file, "/usr/lib/uwufetch/ascii/%s.txt", user_info->os_name);
+			sprintf(ascii_file, "/sbin/uwufetch/lib/ascii/%s.txt", user_info->os_name);
 
 		file = fopen(ascii_file, "r");
 		if (!file) {
