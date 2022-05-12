@@ -28,10 +28,10 @@ include $(BUILD_EXECUTABLE)
 
 ## Create dirs
 $(shell mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/sbin/etc/uwufetch/)
-$(shell mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/sbin/uwufetch/lib)
+$(shell mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/sbin/lib/uwufetch/)
 
 ## Copy files
 $(shell cp $(LOCAL_PATH)/default.config $(TARGET_RECOVERY_ROOT_OUT)/sbin/etc/uwufetch/config)
-$(shell cp -r $(LOCAL_PATH)/res/* $(TARGET_RECOVERY_ROOT_OUT)/sbin/uwufetch/lib)
+$(shell cp -r $(LOCAL_PATH)/res/* $(TARGET_RECOVERY_ROOT_OUT)/sbin/lib/uwufetch/)
 
 
